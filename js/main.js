@@ -7,13 +7,13 @@ va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
-var km = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
+var km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
 var eta = parseInt(prompt("Quanti anni hai?"));
 var prezzoBiglietto = km * 0.21;
 
-console.log("KM=" + km);
-console.log("Età=" + eta);
-console.log("Prezzo Biglietto=" + prezzoBiglietto + "€");
+console.log("KM = " + km);
+console.log("Età = " + eta);
+console.log("Prezzo Biglietto = " + prezzoBiglietto + "€");
 
 var prezzoFinale;
 
@@ -23,6 +23,9 @@ if (eta < 18) {
   prezzoFinale = prezzoBiglietto - 40 / 100;
 }
 
-console.log("Il prezzo finale del biglietto è di: " + prezzoFinale + "€");
+console.log(
+  "Il prezzo finale del biglietto è di: " + prezzoFinale.toFixed(2) + "€"
+);
 
-document.getElementById("prezzoFinale").innerHTML = prezzoFinale;
+document.getElementById("prezzoFinale").innerHTML =
+  prezzoFinale.toFixed(2) + "€";
