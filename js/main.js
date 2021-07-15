@@ -17,11 +17,11 @@ console.log("Età = " + eta);
 console.log("Prezzo Biglietto = " + prezzoBiglietto + "€");
 
 if (eta < 18) {
-  var prezzoFinale = prezzoBiglietto * (20 / 100); //Sconto del 20%
+  prezzoFinale = prezzoBiglietto - prezzoBiglietto * (20 / 100); //Sconto del 20%
 } else if (eta > 65) {
-  var prezzoFinale = prezzoBiglietto * (40 / 100); //Sconto del 40%
+  prezzoFinale = prezzoBiglietto - prezzoBiglietto * (40 / 100); //Sconto del 40%
 } else {
-  var prezzoFinale = prezzoBiglietto; //Nessuno sconto
+  prezzoFinale = prezzoBiglietto; //Nessuno sconto
 }
 
 console.log(
