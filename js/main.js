@@ -18,9 +18,11 @@ console.log("Prezzo Biglietto = " + prezzoBiglietto + "€");
 var prezzoFinale;
 
 if (eta < 18) {
-  prezzoFinale = prezzoBiglietto - 20 / 100;
+  prezzoFinale = prezzoBiglietto - 20 / 100; //Sconto del 20%
 } else if (eta > 65) {
-  prezzoFinale = prezzoBiglietto - 40 / 100;
+  prezzoFinale = prezzoBiglietto - 40 / 100; //Sconto del 40%
+} else {
+  prezzoFinale = prezzoBiglietto; //Nessuno sconto
 }
 
 console.log(
